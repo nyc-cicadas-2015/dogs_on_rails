@@ -1,0 +1,9 @@
+<% @dogs.each do |dog| %>
+  <li><%= dog.name %> is a <%= dog.breed %></li>
+<% end %>
+
+<% if @dogs.count == 0 %>
+  <h1>No dogs here</h1>
+<% end %>
+
+<%= link_to "Create a new Dog", new_dog_path %>
